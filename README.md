@@ -99,7 +99,7 @@ First, the processdata.json file is mapped into the container so that it is avai
 
 In DBHOST the hostname is configured. This can be a full hostname (FQDN), but here it is sufficient to specify the service name ("mariadb"), since Docker provides this to the containers in the service-internal network as hostname.
 
-The environment variables DBUSER, DBNAME and DBPASSWORD contain the corresponding information from the MariaDB configuration. DBUSER corresponds to the user name from MARIADB_USER, DBNAME to the database from MARIADB_DATABASE, and DBPASSWORD to the password defined in MARIADB_PASSWORT.
+The environment variables DBUSER, DBNAME and DBPASSWORD contain the corresponding information from the MariaDB configuration. DBUSER corresponds to the user name from MARIADB_USER, DBNAME to the database from MARIADB_DATABASE, and DBPASSWORD to the password defined in MARIADB_PASSWORD.
 
 The specification of DBPORT is not necessary, since here the default port 3306 is selected. Again, access is only in the Docker service internal network.
 
