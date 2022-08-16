@@ -9,10 +9,10 @@ services:
     #ports:
     #  - "3307:3306"
     environment:
-      MYSQL_ROOT_PASSWORD: <ROOT PASSWORD>
-      MYSQL_DATABASE: solardb
-      MYSQL_USER: solardbuser
-      MYSQL_PASSWORD: <DATABASE PASSWORD>
+      MARIADB_ROOT_PASSWORD: "<ROOT PASSWORD>"
+      MARIADB_DATABASE: "solardb"
+      MARIADB_USER: "solardbuser"
+      MARIADB_PASSWORD: "<DATABASE PASSWORD>"
   invafetch:
     image: ghcr.io/geschke/invafetch:main
     restart: always
@@ -22,10 +22,11 @@ services:
       DBHOST: "mariadb"
       DBUSER: "solardbuser"
       DBNAME: "solardb"
-      DBPASSWORD: <DATABASE PASSWORD>
+      DBPASSWORD: "<DATABASE PASSWORD>"
       #DBPORT:"3307"
-      INV_SERVER: <INVERTER IP ADDRESS>
-      INV_PASSWORD: <INVERTER PASSWORD>
+      INV_SERVER: "<INVERTER IP ADDRESS>"
+      INV_PASSWORD: "<INVERTER PASSWORD>"
+      #INV_SCHEME: "http"
       #TIME_REQUEST_DURATION_SECONDS:2
       #TIME_NEW_LOGIN_MINUTES:1
   invaps:
@@ -35,9 +36,9 @@ services:
       DBHOST: "mariadb"
       DBUSER: "solardbuser"
       DBNAME: "solardb"
-      DBPASSWORD: <DATABASE PASSWORD>
+      DBPASSWORD: "<DATABASE PASSWORD>"
+      #DBPORT: 3307
       PORT: "8080"
       GIN_MODE: release
-      #DBPORT: 3307
     ports:
       - "8090:8080"
