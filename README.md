@@ -1,5 +1,8 @@
 # grkopv-dashboard (Grafana Kostal Photovoltaic Dashboard)
 
+![Solar_Inverter_Dashboard_Grafana](https://user-images.githubusercontent.com/272754/185182296-e1d2dd3c-3ce7-4b93-9c62-cd94e3b3171e.png)
+
+
 This repository contains the documentation and all files necessary to build a Grafana dashboard for Kostal Plenticore inverters using the invafetch and invaps tools running in a Docker environment.
 
 ## Prerequisites
