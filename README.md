@@ -92,11 +92,11 @@ The official [Docker image of MariaDB](https://hub.docker.com/_/mariadb) is used
 
 The entries under `MARIADB_DATABASE` and `MARIADB_USER` can be taken from the example, in which case the database name "`solardb`" and the database user "`solardbuser`" are selected. If these specifications should be changed, a change is likewise necessary with the following services invafetch and invaps. In most cases a change is not necessary, because the MariaDB instance used is a stand-alone service exclusively for the use of the tools described here. Likewise, no access from outside is required, so the MariaDB port is not shared externally, i.e., no "`ports:`" option is necessary.
 
-In the variable `MARIADB_PASSWORD` the password for the user `MARIADB_USER` is defined. When MariaDB is started for the first time, the database `MARIADB_DATABASE` and the user `MARIADB_USER` are thus created with the password `MARIADB_PASSWORD`, whereby the user receives the appropriate rights (GRANT ALL) for the database MARIADB_DATABASE.
+In the variable `MARIADB_PASSWORD` the password for the user `MARIADB_USER` is defined. When MariaDB is started for the first time, the database `MARIADB_DATABASE` and the user `MARIADB_USER` are thus created with the password `MARIADB_PASSWORD`, whereby the user receives the appropriate rights (*GRANT ALL*) for the database MARIADB_DATABASE.
 
 #### invafetch
 
-The invafetch tool reads the Processdata values at regular intervals from the Inverter API and stores the results in JSON format in a MariaDB table. More information can be found in the [invafetch GitHub repository](https://github.com/geschke/invafetch).
+The invafetch tool reads the processdata values at regular intervals from the Inverter API and stores the results in JSON format in a MariaDB table. More information can be found in the [invafetch GitHub repository](https://github.com/geschke/invafetch).
 
 First, the `processdata.json` file is mapped into the container so that it is available to invafetch at startup. Further configuration takes place using environment variables.
 
@@ -120,7 +120,7 @@ The variable `TIME_NEW_LOGIN_MINUTES` specifies after how many minutes a new ses
 
 #### invaps
 
-The invaps tool reads the inverter's Processdata values from the MariaDB database and makes them available in a format suitable for Prometheus. More information about invaps can be found in the [invaps GitHub repository](https://github.com/geschke/invaps).
+The invaps tool reads the inverter's processdata values from the MariaDB database and makes them available in a format suitable for Prometheus. More information about invaps can be found in the [invaps GitHub repository](https://github.com/geschke/invaps).
 
 For the database configuration variables, the same notes apply as for invafetch. These specifications can simply be taken over.
 
