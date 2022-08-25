@@ -50,7 +50,7 @@ services:
       MARIADB_USER: "solardbuser"
       MARIADB_PASSWORD: "<DATABASE PASSWORD>"
   invafetch:
-    image: ghcr.io/geschke/invafetch:main
+    image: ghcr.io/geschke/invafetch:latest
     restart: always
     volumes:
       - ./invafetch/processdata.json:/app/processdata.json
@@ -66,7 +66,7 @@ services:
       #TIME_REQUEST_DURATION_SECONDS:2
       #TIME_NEW_LOGIN_MINUTES:1
   invaps:
-    image: ghcr.io/geschke/invaps:main
+    image: ghcr.io/geschke/invaps:latest
     restart: always
     environment:
       DBHOST: "mariadb"
