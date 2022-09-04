@@ -467,9 +467,11 @@
             "type": "prometheus",
             "uid": "${DS_PROMETHEUS}"
           },
+          "editorMode": "code",
           "expr": "devices_local_home_own_p",
           "interval": "",
-          "legendFormat": "Own Consumption",
+          "legendFormat": "Home Power from Own",
+          "range": true,
           "refId": "A"
         },
         {
@@ -477,9 +479,11 @@
             "type": "prometheus",
             "uid": "${DS_PROMETHEUS}"
           },
+          "editorMode": "code",
           "expr": "devices_local_home_bat_p",
           "interval": "",
-          "legendFormat": "Battery",
+          "legendFormat": "from Battery",
+          "range": true,
           "refId": "B"
         },
         {
@@ -487,9 +491,11 @@
             "type": "prometheus",
             "uid": "${DS_PROMETHEUS}"
           },
+          "editorMode": "code",
           "expr": "devices_local_home_grid_p",
           "interval": "",
-          "legendFormat": "Grid",
+          "legendFormat": "from Grid",
+          "range": true,
           "refId": "C"
         },
         {
@@ -497,9 +503,11 @@
             "type": "prometheus",
             "uid": "${DS_PROMETHEUS}"
           },
+          "editorMode": "code",
           "expr": "devices_local_home_pv_p",
           "interval": "",
-          "legendFormat": "PV",
+          "legendFormat": "from PV",
+          "range": true,
           "refId": "D"
         },
         {
@@ -507,9 +515,11 @@
             "type": "prometheus",
             "uid": "${DS_PROMETHEUS}"
           },
+          "editorMode": "code",
           "expr": "devices_local_home_p",
           "interval": "",
-          "legendFormat": "Total",
+          "legendFormat": "Home Power",
+          "range": true,
           "refId": "E"
         }
       ],
@@ -5351,6 +5361,6 @@
   "timezone": "",
   "title": "Solar Inverter Dashboard",
   "uid": "BDreml_7k",
-  "version": 57,
+  "version": 58,
   "weekStart": ""
 }
