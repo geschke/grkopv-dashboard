@@ -27,7 +27,7 @@
       "type": "grafana",
       "id": "grafana",
       "name": "Grafana",
-      "version": "9.1.0"
+      "version": "9.1.6"
     },
     {
       "type": "datasource",
@@ -572,7 +572,7 @@
         "showThresholdLabels": false,
         "showThresholdMarkers": true
       },
-      "pluginVersion": "9.1.0",
+      "pluginVersion": "9.1.6",
       "targets": [
         {
           "datasource": {
@@ -724,7 +724,7 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "9.1.0",
+      "pluginVersion": "9.1.6",
       "targets": [
         {
           "datasource": {
@@ -792,7 +792,7 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "9.1.0",
+      "pluginVersion": "9.1.6",
       "targets": [
         {
           "datasource": {
@@ -1235,16 +1235,19 @@
       "fieldConfig": {
         "defaults": {
           "color": {
-            "mode": "palette-classic"
+            "mode": "thresholds",
+            "seriesBy": "last"
           },
           "custom": {
             "axisCenteredZero": false,
             "axisColorMode": "text",
             "axisLabel": "Hz",
             "axisPlacement": "auto",
+            "axisSoftMax": 50.15,
+            "axisSoftMin": 49.85,
             "barAlignment": 0,
             "drawStyle": "line",
-            "fillOpacity": 10,
+            "fillOpacity": 0,
             "gradientMode": "none",
             "hideFrom": {
               "legend": false,
@@ -1264,20 +1267,34 @@
               "mode": "none"
             },
             "thresholdsStyle": {
-              "mode": "off"
+              "mode": "area"
             }
           },
+          "decimals": 3,
           "mappings": [],
+          "noValue": "50",
           "thresholds": {
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
+                "color": "red",
                 "value": null
               },
               {
+                "color": "orange",
+                "value": 49.8
+              },
+              {
+                "color": "green",
+                "value": 49.9
+              },
+              {
+                "color": "orange",
+                "value": 50.1
+              },
+              {
                 "color": "red",
-                "value": 80
+                "value": 50.2
               }
             ]
           },
@@ -2188,16 +2205,19 @@
       "fieldConfig": {
         "defaults": {
           "color": {
-            "mode": "palette-classic"
+            "mode": "thresholds",
+            "seriesBy": "last"
           },
           "custom": {
             "axisCenteredZero": false,
             "axisColorMode": "text",
             "axisLabel": "Hz",
             "axisPlacement": "auto",
+            "axisSoftMax": 50.15,
+            "axisSoftMin": 49.85,
             "barAlignment": 0,
             "drawStyle": "line",
-            "fillOpacity": 10,
+            "fillOpacity": 0,
             "gradientMode": "none",
             "hideFrom": {
               "legend": false,
@@ -2217,20 +2237,34 @@
               "mode": "none"
             },
             "thresholdsStyle": {
-              "mode": "off"
+              "mode": "area"
             }
           },
+          "decimals": 3,
           "mappings": [],
+          "noValue": "50",
           "thresholds": {
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
+                "color": "red",
                 "value": null
               },
               {
+                "color": "orange",
+                "value": 49.8
+              },
+              {
+                "color": "green",
+                "value": 49.9
+              },
+              {
+                "color": "orange",
+                "value": 50.1
+              },
+              {
                 "color": "red",
-                "value": 80
+                "value": 50.2
               }
             ]
           },
@@ -2244,7 +2278,7 @@
         "x": 0,
         "y": 76
       },
-      "id": 16,
+      "id": 130,
       "options": {
         "legend": {
           "calcs": [],
@@ -2264,9 +2298,11 @@
             "type": "prometheus",
             "uid": "${DS_PROMETHEUS}"
           },
+          "editorMode": "code",
           "expr": "devices_local_ac_frequency",
           "interval": "",
           "legendFormat": "AC Frequency",
+          "range": true,
           "refId": "A"
         }
       ],
@@ -4633,8 +4669,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -4728,8 +4763,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -4823,8 +4857,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -4916,8 +4949,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -5011,8 +5043,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -5106,8 +5137,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -5199,8 +5229,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -5292,8 +5321,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -5361,6 +5389,6 @@
   "timezone": "",
   "title": "Solar Inverter Dashboard",
   "uid": "BDreml_7k",
-  "version": 58,
+  "version": 64,
   "weekStart": ""
 }
